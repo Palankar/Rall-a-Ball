@@ -11,6 +11,7 @@ TagManager:
   - Booster
   - Bullet
   - Pusher
+  - Turret
   layers:
   - Default
   - TransparentFX

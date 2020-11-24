@@ -27,4 +27,10 @@ public class Bullet : MonoBehaviour
     {
         transform.Translate(Vector3.forward * (Time.deltaTime * force), Space.Self);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(!collision.gameObject.CompareTag("Turret"))
+            Destroy(this.gameObject);
+    }
 }

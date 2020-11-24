@@ -55,16 +55,6 @@ public class PlayerController : MonoBehaviour
         countText.text = "Count: " + collectCount + "/" + finScore + "\nStage: " + sceneEntity.Stage;
     }
     
-    private void LateUpdate()
-    {
-        if (!isEnd && rotateCamera)
-        {
-
-            //Camera.main.transform.RotateAround(transform.position, Vector3.up, cameraMovementX * MouseSens * 300 * Time.deltaTime);
-        }
-    }
-    
-
     void FixedUpdate()
     {
         if (!isEnd)

@@ -5040,7 +5040,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615763692}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.26, y: 0.42000055, z: -6.91}
+  m_LocalPosition: {x: -4.65, y: 0.42000055, z: -7.139997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9610,7 +9610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342410679}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.26, y: 0.44100046, z: -6.91}
+  m_LocalPosition: {x: -4.65, y: 0.44100046, z: -7.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 120996601}
@@ -15016,11 +15016,11 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 615763692}
+      objectReference: {fileID: 0}
     - target: {fileID: 9051228742063543576, guid: 2fb48b76ba739dc42ac73a15942b5400,
         type: 3}
       propertyPath: shootingSpeed
-      value: 0.8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9051228742063543577, guid: 2fb48b76ba739dc42ac73a15942b5400,
         type: 3}
@@ -15030,7 +15030,7 @@ PrefabInstance:
     - target: {fileID: 9051228742063543577, guid: 2fb48b76ba739dc42ac73a15942b5400,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.417027
+      value: 10.47
       objectReference: {fileID: 0}
     - target: {fileID: 9051228742063543577, guid: 2fb48b76ba739dc42ac73a15942b5400,
         type: 3}
