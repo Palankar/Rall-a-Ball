@@ -5040,7 +5040,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615763692}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.65, y: 0.42000055, z: -7.139997}
+  m_LocalPosition: {x: -4.3, y: 0.42000055, z: -6.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5072,7 +5072,6 @@ MonoBehaviour:
   fallSpeed: 6
   sceneEntity: {fileID: 664234860}
   rotateCamera: 1
-  cameraMovementX: 0
 --- !u!114 &615763699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9610,7 +9609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342410679}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.65, y: 0.44100046, z: -7.14}
+  m_LocalPosition: {x: -4.3, y: 0.44100046, z: -6.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 120996601}
@@ -15016,7 +15015,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 615763692}
     - target: {fileID: 9051228742063543576, guid: 2fb48b76ba739dc42ac73a15942b5400,
         type: 3}
       propertyPath: shootingSpeed

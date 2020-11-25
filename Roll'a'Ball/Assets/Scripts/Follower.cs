@@ -23,7 +23,7 @@ public class Follower : MonoBehaviour
         if(!player.GetComponent<PlayerController>().isDead)
         {
             transform.position = player.transform.position + offset;
-            transform.Rotate(0, controller.cameraMovementX * MouseSens, 0);
+            transform.Rotate(0, controller.getCameraMovementX() * MouseSens, 0);
         }
     }
 }

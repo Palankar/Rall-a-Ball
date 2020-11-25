@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
     private Vector3 rawMovement;
-    public float cameraMovementX;
+    private float cameraMovementX;   //Значений не ставим, это для получения значения скриптом объекта камеры
     private int collectCount;
     private Boolean isEnd;
 
@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
         SetCountText();
     }
     
+    //Получаем вектор движения мыши вбок
     void OnLook(InputValue movementValue)
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour
         cameraMovementX = movementVector.x;
     }
     
-
+    //Получаем вектор движения нажатия клавиш
     void OnMove(InputValue movementValue) 
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
@@ -59,10 +60,15 @@ public class PlayerController : MonoBehaviour
     {
         if (!isEnd)
         {
-            rb.AddForce((forX(rawMovement) + forY(rawMovement)) * speed);
+            if (rawMovement.x != 0 && rawMovement.z != 0)
+                //Потому что из-за сложения векторов движение по диагонали было сильно быстрее прямого
+                rb.AddForce((forX(rawMovement) + forY(rawMovement))/1.5f * speed);
+            else
+                rb.AddForce((forX(rawMovement) + forY(rawMovement)) * speed);
         }
     }
 
+    //Получаем вектор движения относительно камеры по X
     private Vector3 forX(Vector3 vector)
     {
         if (vector.x > 0)
@@ -73,6 +79,7 @@ public class PlayerController : MonoBehaviour
             return new Vector3(0, 0, 0);
     }
 
+    //Получаем вектор движения относительно камеры по Y
     private Vector3 forY(Vector3 vector)
     {
         if (vector.z > 0)
@@ -164,5 +171,10 @@ public class PlayerController : MonoBehaviour
         restartButton.SetActive(false);
         quitButton.SetActive(false);
         isEnd = false;
+    }
+
+    public float getCameraMovementX()
+    {
+        return cameraMovementX;
     }
 }
